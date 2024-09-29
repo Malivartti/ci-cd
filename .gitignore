@@ -1,6 +1,8 @@
 node_modules
 /build
 /storybook-static
+.loki/report.json
+.loki/report.html
 
 .vscode/*
 .DS_Store
