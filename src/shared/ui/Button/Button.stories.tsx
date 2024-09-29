@@ -11,22 +11,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    children: 'Text'
+    children: 'Text',
   },
 };
 
 export const Clear: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.CLEAR
+    theme: ButtonTheme.CLEAR,
   },
 };
 
 export const Outline: Story = {
   args: {
     children: 'Text',
-    theme: ButtonTheme.OUTLINE
+    theme: ButtonTheme.OUTLINE,
   },
 };
-
- 

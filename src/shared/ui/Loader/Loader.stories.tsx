@@ -22,8 +22,6 @@ export const Dark: Story = {
 
   },
   decorators: [
-    ThemeDecorator(Theme.DARK)
-  ]
+    ThemeDecorator(Theme.DARK),
+  ],
 };
-
- 
