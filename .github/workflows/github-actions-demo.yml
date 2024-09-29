@@ -1,19 +1,19 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: 
+name: linting, testing, building
+on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-          node-version: [ 17. x ]
+        node-version: [ 17.x ]
+
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -22,8 +22,8 @@ jobs:
       - name: build production project
         run: npm run build:prod
       - name: linting typescript
-        run: npm run eslint
+        run: npm run lint:ts
       - name: linting css
-        run: npm run stylelint
+        run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit
